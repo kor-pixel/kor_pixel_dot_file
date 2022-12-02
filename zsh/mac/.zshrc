@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # pnpm
-export PNPM_HOME="/Users/samuelharrygardner/Library/pnpm"
+export PNPM_HOME="/Users/#NAMEHERE/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 export NVM_DIR="$HOME/.nvm"
