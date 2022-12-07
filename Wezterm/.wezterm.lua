@@ -33,5 +33,11 @@ return {
       action = wezterm.action.CloseCurrentTab { confirm = true },
     },
   },
-
+  
+  colors = {
+    tab_bar = {
+    -- The color of the inactive tab bar edge/divider
+      inactive_tab_edge = '#323232',
+    },
+  },
 }
