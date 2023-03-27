@@ -1,43 +1,33 @@
 local wezterm = require 'wezterm'
-
-local new_espresso = wezterm.color.get_builtin_schemes()['Espresso']
-new_espresso.cursor_fg = 'black'
-
-return {
+local config = {
   font = wezterm.font 'D2Coding ligature',
-  font_size = 14,
-
+  font_size = 15,
   hide_tab_bar_if_only_one_tab = true,
-
-  color_schemes = {
-    ['My Espresso'] = new_espresso,
-  },
-  color_scheme = 'My Espresso',
-
-  window_frame = {
-    inactive_titlebar_bg = '#323232',
-    active_titlebar_bg = '#323232',
+}
+config.color_scheme = 'seoulbones_dark'
+config.colors = {
+  cursor_fg = 'black'
+}
+config.colors = {
+  tab_bar = {
+    inactive_tab_edge = '#4b4b4b'
+  }
+}
+config.window_frame = {
+    inactive_titlebar_bg = '#4b4b4b',
+    active_titlebar_bg = '#4b4b4b',
     -- These are fixes for wayland window decoration issue
-    inactive_titlebar_border_bottom = "#323232",
-    active_titlebar_border_bottom = "#323232",
-  },
-
-  window_padding = {
-    top = 0,
-  },
-
-  keys = {
-    {
+    inactive_titlebar_border_bottom = "#4b4b4b",
+    active_titlebar_border_bottom = "#4b4b4b",
+}
+config.window_padding = {
+  top = 0,
+}
+config.keys = {
+      {
       key = 'q',
-      mods = 'CTRL|SHIFT',
+      mods = 'CMD',
       action = wezterm.action.CloseCurrentTab { confirm = true },
     },
-  },
-  
-  colors = {
-    tab_bar = {
-    -- The color of the inactive tab bar edge/divider
-      inactive_tab_edge = '#323232',
-    },
-  },
 }
+return config
