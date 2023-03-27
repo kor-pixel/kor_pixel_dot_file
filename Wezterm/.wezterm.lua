@@ -2,13 +2,8 @@ local wezterm = require 'wezterm'
 local config = {
   font = wezterm.font 'D2Coding ligature',
   font_size = 15,
-  hide_tab_bar_if_only_one_tab = true,
+  hide_tab_bar_if_only_one_tab = true
 }
-
-if wezterm.config_builder then
-  config = wezterm.config_builder()
-end
-
 config.color_scheme = 'seoulbones_dark'
 config.colors = {
   cursor_fg = 'black'
