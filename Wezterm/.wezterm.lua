@@ -27,12 +27,19 @@ local config = {
     },
 
     keys = {
+        -- shortcut to close the current tab
         {
             key = "q",
             mods = "CMD",
             action = wezterm.action.CloseCurrentTab {confirm = true}
-        }
+        },
+        -- Keybind to replace ctrl+c with cmd+. on mac operating system
+        { 
+            key = '.', 
+            mods = 'CMD', 
+            action = wezterm.action.SendString '\003',
+        },
     }
-    
 }
 return config
+
