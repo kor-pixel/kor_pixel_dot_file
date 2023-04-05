@@ -1,5 +1,7 @@
 
 local wezterm = require "wezterm"
+local act = wezterm.action
+
 local config = {
 
     color_scheme = "seoulbones_dark",
@@ -31,15 +33,14 @@ local config = {
         {
             key = "q",
             mods = "CMD",
-            action = wezterm.action.CloseCurrentTab {confirm = true}
+            action = act.CloseCurrentTab {confirm = true}
         },
         -- Keybind to replace ctrl+c with cmd+. on mac operating system
         { 
             key = '.', 
             mods = 'CMD', 
-            action = wezterm.action.SendString '\003',
+            action = act.SendString '\003',
         },
     }
 }
 return config
-
