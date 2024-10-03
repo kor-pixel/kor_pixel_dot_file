@@ -32,3 +32,8 @@
     z-index: 1 !important; /* Ensure z-index for inactive tabs is below dividers */
   }
   
+
+  /* Hide extenssion name from search bar */ 
+  #urlbar #identity-box.extensionPage #identity-icon-label {
+    display: none !important;
+  }
